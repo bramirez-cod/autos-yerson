@@ -321,11 +321,16 @@ if (window.location.pathname.includes('detalle.html')) {
         document.getElementById('det-km').textContent = (auto.id * 12500) + " Km";
         document.getElementById('det-trans').textContent = auto.transmision.toUpperCase();
         
-        // Botón Enviar Información (WhatsApp)
+    // Botón Enviar Información (WhatsApp)
         const btnEnviar = document.getElementById('btn-enviar-info');
         if(btnEnviar) {
             const numeroTelefono = "50683307876";
-            const mensaje = `Hola Autos Yerson, me interesa solicitar información sobre el ${auto.marca} ${auto.modelo} (${auto.anio}) valorado en $${precioFmt}.`;
+            // Capturamos la URL exacta de esta página
+            const urlActual = window.location.href; 
+            
+            // Agregamos la URL al final del mensaje
+            const mensaje = `Hola Autos Yerson, me interesa solicitar información sobre el ${auto.marca} ${auto.modelo} (${auto.anio}) valorado en $${precioFmt}.\n\nPuedes ver el vehículo aquí: ${urlActual}`;
+            
             btnEnviar.href = `https://wa.me/${numeroTelefono}?text=${encodeURIComponent(mensaje)}`;
         }
 
