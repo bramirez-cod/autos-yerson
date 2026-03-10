@@ -1775,6 +1775,7 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 5%;
+    margin-top: -65px;
 }
 
 .logo-footer {
@@ -1851,7 +1852,7 @@ header {
     position: sticky; top: 0; z-index: 1000; 
 }
 
-.logo-img { height: 60px; width: auto; }
+.logo-img { height: 130px; width: auto; margin-bottom: -40px;  margin-top: -25px; }
 
 header nav ul { list-style: none; display: flex; gap: 25px; }
 
